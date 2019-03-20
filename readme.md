@@ -6,6 +6,8 @@ Elektroninen keittokirja
 	aakkosjärjestyksessä
 	reseptit joissa on tiettyjä aineita(käyttäjä syöttää)
 	tekoaika on alle tai yli
-git@github.com:haxsampo/tsoha.git\par
+-kaksi eri käyttäjäprofiilia, joista vieras pystyy vain tarkkailemaan tietokannan sisältöä	
+	
+
 
 heroku: http://tsohapython.herokuapp.com/
