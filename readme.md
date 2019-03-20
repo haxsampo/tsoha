@@ -1,4 +1,4 @@
-#H1 Elektroninen keittokirja
+# Elektroninen keittokirja
 
 1. tallettaa reseptjä, joihin kuuluu ainesosalista, ohjeet, tekoaika
 2. mahdollistaa reseptien muokkauksen
