@@ -4,7 +4,7 @@
 2. mahdollistaa reseptien muokkauksen
 3. mahdollistaa reseptihaun
 
-	⋅⋅*aakkosjärjestyksessä
+	aakkosjärjestyksessä
 	
 4. kaksi eri käyttäjäprofiilia, joista vieras pystyy vain tarkkailemaan tietokannan sisältöä	
 	
