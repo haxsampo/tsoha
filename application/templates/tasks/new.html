@@ -2,7 +2,46 @@
   
 {% block body %}
 <form method="POST" action="{{ url_for('tasks_create') }}">
+  <table>
+
+    <tr>
+      <td>
+        {{ form.name.label }}
+      </td>
+      <td>
+        {{ form.name }}
+      </td>
+    </tr>
+
+    <tr>
+        <td>
+          {{ form.tekoaika.label }}
+        </td>
+        <td>
+          {{ form.tekoaika }}
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+          {{ form.vaikeusarvio.label }}
+        </td>
+        <td>
+          {{ form.vaikeusarvio }}
+        </td>
+    </tr>
+
+    <tr>
+      <td colspan="2">
+        <input type="submit" value="Tää olis uus nappi"/>
+      </td>
+    </tr>
+
+  </table>
   <input type="text" name="name"/>
+  <input type="number" name="tekoaika"/>
+  <input type="text" name="vaikeusarvio"/>
   <input type="submit" value="Add a new task"/>
 </form>
+
 {% endblock %}

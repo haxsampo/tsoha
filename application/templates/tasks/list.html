@@ -3,16 +3,22 @@
 {% block body %}
   <table>
     <tr>
-      <th>Task</th>
+      <th>Resepti</th>
+      <th>Tekoaika</th>
+      <th>Vaikeusarvio</th>
       <th></th>
     </tr>
     {% for task in tasks %}
     <tr>
       <td>{{ task.name }}</td>
+      <td>{{ task.tekoaika }}</td>
+      <td>{{ task.vaikeusarvio }}</td>
+      <td>{{ task.id }}</td>
       <td>
-	<form method="POST" action="{{ url_for(task_id=task.id) }}">
-	  <input type="submit" value="Change status!"/>
-	</form>
+          <form method="POST" action="{{ url_for('tasks_delete', task_id=task.id) }}">
+              <input type="submit" value="poista">
+            </form>
+  
       </td>
     </tr>
     {% endfor %}
