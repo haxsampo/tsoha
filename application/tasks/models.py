@@ -10,6 +10,7 @@ class Task(db.Model):
     vaikeusarvio = db.Column(db.String(144))
     name = db.Column(db.String(144))
 
+
     def __init__(self, name, tekoaika, vaikeusarvio):
         self.tekoaika = tekoaika
         self.vaikeusarvio = vaikeusarvio
