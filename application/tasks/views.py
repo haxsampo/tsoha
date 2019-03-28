@@ -1,6 +1,6 @@
 from flask import redirect, render_template, request, url_for
 from sqlalchemy import text
-from flask_login import login_required
+from flask_login import login_required, current_user
 
 from application import app, db
 from application.tasks.models import Task
@@ -38,7 +38,8 @@ def tasks_create():
     name = request.form.get("name")
     tekoaika = request.form.get("tekoaika")
     vaikeusarvio = request.form.get("vaikeusarvio")
-    t = Task(name, tekoaika, vaikeusarvio)
+    account_id = current_user.id
+    t = Task(name, tekoaika, vaikeusarvio, account_id)
 
     db.session().add(t)
     db.session().commit()

@@ -10,8 +10,10 @@ class Task(db.Model):
     vaikeusarvio = db.Column(db.String(144))
     name = db.Column(db.String(144))
 
+    account_id = db.Column(db.Integer, db.ForeignKey('account.id'), nullable=False)
 
-    def __init__(self, name, tekoaika, vaikeusarvio):
+    def __init__(self, name, tekoaika, vaikeusarvio, account_id):
         self.tekoaika = tekoaika
         self.vaikeusarvio = vaikeusarvio
         self.name = name
+        self.account_id = account_id
