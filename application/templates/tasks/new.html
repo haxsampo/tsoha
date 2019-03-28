@@ -11,6 +11,13 @@
       <td>
         {{ form.name }}
       </td>
+      <td>
+        <ul>
+          {% for error in form.name.errors %}
+          <li>{{ error }}</li>
+          {% endfor %}
+        </ul>
+      </td>
     </tr>
 
     <tr>
@@ -33,15 +40,16 @@
 
     <tr>
       <td colspan="2">
-        <input type="submit" value="Tää olis uus nappi"/>
+        <input type="submit" value="Lissää"/>
       </td>
     </tr>
 
   </table>
-  <input type="text" name="name"/>
+  <!--<input type="text" name="name"/>
   <input type="number" name="tekoaika"/>
   <input type="text" name="vaikeusarvio"/>
   <input type="submit" value="Add a new task"/>
+  -->
 </form>
 
 {% endblock %}
